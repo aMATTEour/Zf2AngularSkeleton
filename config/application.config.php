@@ -4,9 +4,13 @@ $env = getenv('APPLICATION_ENV');
 $env = isset($env) ? $env : 'production';
 
 $modules = array(
-    'Application',
     'DoctrineModule',
     'DoctrineORMModule',
+    'ZfcBase',
+    'ZfcUser',
+    'ZfcUserDoctrineORM',
+    'Application',
+//    'SamUser'
 );
 
 if ($env == 'development') {

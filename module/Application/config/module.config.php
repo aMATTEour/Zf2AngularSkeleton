@@ -91,26 +91,25 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
-    // Placeholder for console routes
-    'console' => array(
-        'router' => array(
-            'routes' => array(),
-        ),
-    ),
-
     'doctrine' => array(
         'driver' => array(
             // overriding zfc-user-doctrine-orm's config
-            'basic_entity' => array(
+            'zfcuser_entity' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
                 'paths' => __DIR__ . '/../src/Application/Entity',
             ),
 
             'orm_default' => array(
                 'drivers' => array(
-                    'Application\Entity' => 'basic_entity',
+                    'Application\Entity' => 'zfcuser_entity',
                 ),
             ),
+        ),
+    ),
+    // Placeholder for console routes
+    'console' => array(
+        'router' => array(
+            'routes' => array(),
         ),
     ),
 );
